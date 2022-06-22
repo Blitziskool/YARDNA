@@ -1,7 +1,87 @@
+body{
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
+.featured{
+    opacity: 0;
+    transform: translateY(-480px);
+    animation: fade 2s 3s forwards;
+}
+
+.library{
+    opacity: 0;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-style: solid;
+    border-color: var(--primary-text-color);;
+    transform: translateY(-200px);
+    width: 890px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-between;
+    grid-gap: 15px;
+    animation: fade 2s 3s forwards;
+}
+
+.fortnite{
+    width: 200px;
+    height: 200px;
+    background: url(img/fortniteBk.png);
+    background-position: center;
+    border-radius: 5%;
+    transition: transform .2s; /* Animation */
+}
+
+.fortnite:hover{
+    transform: scale(1.1);
+}
+
+.roblox{
+    width: 200px;
+    height: 200px;
+    background: url(img/robloxBk.png);
+    background-position: center;
+    border-radius: 5%;
+    transition: transform .2s; /* Animation */
+}
+
+.roblox:hover{
+    transform: scale(1.1);
+}
+
+.minecraft{
+    width: 200px;
+    height: 200px;
+    background: url(img/minecraftBk.png);
+    background-position: center;
+    border-radius: 5%;
+    transition: transform .2s; /* Animation */
+}
+
+.minecraft:hover{
+    transform: scale(1.1);
+}
+
+.krunker{
+    width: 200px;
+    height: 200px;
+    background: url(img/krunkerBk.png);
+    background-position: center;
+    border-radius: 5%;
+    transition: transform .2s; /* Animation */
+}
+
+.krunker:hover{
+    transform: scale(1.1);
+}
+
 .header{    
     opacity: 0;
     animation-name: drop-fade;
     animation-duration: 1s;
+    animation-delay: .5s;
     animation-fill-mode: forwards;
     background: linear-gradient(to right, #95C9D6, #064266);
     -webkit-background-clip: text;
@@ -12,7 +92,7 @@
 .headerOne{
     opacity: 0;
     animation-name: drop-fade;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
     background: linear-gradient(to right, #95C9D6, #064266);
@@ -37,21 +117,24 @@ a{
     color: transparent;
     transform: translateX(620px) translateY(-210px);
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: var(--primary-text-color);
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
     overflow: hidden;
 }
 
 .rounded-button{
+    opacity: 0;
     float: right;
-    animation: fade 1.5s;
+    animation: fade 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
     width: 50px;
     height: 50px;
-    background: white;
-    color: black;
+    background: var(--primary-text-color);
+    color: var(--primary-background-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -63,28 +146,28 @@ a{
 }
 
 .rounded-button:hover{
-    background: rgb(139, 139, 139);
+    background: rgb(153, 153, 153);
 }
 
 /* width height*/
 ::-webkit-scrollbar {
     width: 5px;
-  }
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(255, 255, 255);
-  }
+}
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(201, 201, 201);
-  }
+}
   
 @keyframes drop-fade{
     from{transform: translatey(0); opacity: 0;} 
